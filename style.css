@@ -277,7 +277,6 @@ align-items: center;    /*new: centeer content horizontally */
 .portfolio {
   display: grid;
   grid-template-columns: repeat(3, 1fr);  /* 3 columns on big screens */
-  flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
   padding: 1rem;
@@ -289,7 +288,6 @@ max-width: 250px; /* don't get too big */
 height:auto;         /* don't get too big*/
 object-fit: cover; /*allowflexiablie resizing */
 border-radius: 10px;   /* optional : soft corners */
-display:block;
 }
 
 /* Responsive: on tablets, use 2 columns */
