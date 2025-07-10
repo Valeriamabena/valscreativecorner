@@ -279,9 +279,15 @@ align-items: center;    /*new: centeer content horizontally */
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
+  padding: 1rem;
 }
 
 .portfolio-img {
-  flex: 1 1 300px; /* allow images to wrap nicely */
-  object-fit: cover;
+width:auto;    /* don't stretvh horizontally */
+max-width: 100%;   /* never overflow container */
+height:auto;         /* keeps proportions */
+flex: 1 1 300px;    /* allow flexible resizing */
+object-fit: cover; /*allowflexiablie resizing */
+border-radius: 10px;
+display:block;
 }
