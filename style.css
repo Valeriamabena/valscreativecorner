@@ -308,3 +308,16 @@ border-radius: 10px;   /* optional : soft corners */
   transform: scale(1.05);
   transition: transform 0.3s ease;
 }
+.portfolio table {
+  margin: 0 auto;    /* center the  table on the pages */
+  border-collapse: separate;
+  border-spacing: 1rem; /* space between images */
+}
+.portfolio img {
+  width: 100%;
+  max-width: 250px;    /*adjust size as needed */
+  height: auto;         /*keep proportions */
+  border-radius: 10px;
+  object-fit: cover;
+  display: block;
+}
