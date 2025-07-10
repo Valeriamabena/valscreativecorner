@@ -262,3 +262,26 @@ align-items: center;    /*new: centeer content horizontally */
   50% { opacity: 1; }
   100% { opacity: 0.8; }
 }
+
+/* Portfolio images responsive fix */
+.portfolio img {
+  width: 100%;
+  height: auto; /*keeps proportions */
+  display:block;
+  margin: 0 auto; /* center horizontally */
+  border-radius: 10px; /*optional: adds soft corners */
+  max-width: 400px;    /*optional: controls huge images on big screens */
+}
+
+/*Galley layout on small screens */
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.portfolio-img {
+  flex: 1 1 300px; /* allow images to wrap nicely */
+  object-fit: cover;
+}
