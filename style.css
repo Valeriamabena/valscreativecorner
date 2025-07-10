@@ -275,7 +275,8 @@ align-items: center;    /*new: centeer content horizontally */
 
 /*Galley layout on small screens */
 .portfolio {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  /* 3 columns on big screens */
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
@@ -283,11 +284,29 @@ align-items: center;    /*new: centeer content horizontally */
 }
 
 .portfolio-img {
-width:auto;    /* don't stretvh horizontally */
-max-width: 100%;   /* never overflow container */
-height:auto;         /* keeps proportions */
-flex: 1 1 300px;    /* allow flexible resizing */
+width: 100%;    /* don't stretvh horizontally */
+max-width: 250px; /* don't get too big */
+height:auto;         /* don't get too big*/
 object-fit: cover; /*allowflexiablie resizing */
-border-radius: 10px;
+border-radius: 10px;   /* optional : soft corners */
 display:block;
+}
+
+/* Responsive: on tablets, use 2 columns */
+@media (max-width: 768) {
+  .portfolio {
+    grid-template-columns: repeat (2, fr) ;
+  }
+}
+
+/*Responsive : on small phones use 1 column */
+@media (max-width: 480px) {
+  .portfolio {
+    grid-template-columns: 1 fr;
+  }
+}
+
+.portfolio-img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
 }
