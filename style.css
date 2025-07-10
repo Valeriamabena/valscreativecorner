@@ -195,3 +195,24 @@ footer {
 #topBtn:hover {
   background-color: #b87d6c;
 }
+/* Portfolio galley */
+.galley {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1 fr));
+  gap:  1rem;
+  margin-top: 2rem;
+  padding: 0 1 rem;
+}
+
+.galley img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow:0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease; box-shadow: 0.3s ease;
+}
+.galley img:hover{
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
